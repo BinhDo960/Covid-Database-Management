@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+import React, {Component, Fragment, useState} from 'react';
+import Header from './Components/Header/Header';
+import Search from './Components/Search/Search';
+import DataTable from './Components/DataTable/DataTable';
+import 'tachyons';
 import './App.css';
 
-function App() {
+function App(){
+
+  const [records, setRecords] = useState("");
+  const [data, setData] = useState([]);
+
+  const onSubmitForm = async (e) =>{
+    e.preventDefault();
+    try {
+      // This is the main connection to our CSE 412 API as its fetching the localhost:3001.
+      const response = await fetch(`http://localhost:3001/?c_date=${records}`);
+      const parseResponse = await response.json();
+
+      //console.log(parseResponse);
+      setData(parseResponse);
+    } catch (err) {
+      console.error(err.mesage)
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <div>
+        <div className="background">
+          <Header />
+          <Search records = {records} setRecords = {setRecords} onSubmitForm = {onSubmitForm}/>
+          <DataTable data = {data}/>
+        </div>
+      </div>
+    </Fragment>
   );
 }
 

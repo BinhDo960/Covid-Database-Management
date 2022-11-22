@@ -1,0 +1,32 @@
+form {
+    width:985px; 
+    margin:0 
+    auto
+}
+
+.SearchCSS {
+    text-align: center;
+}
+
+.SearchBar {
+    border-style: none; 
+    border-width: 0;
+    width: 800px;
+}
+
+.SearchButton {
+    border-radius: 9999px;
+    border-style: none; 
+    border-width: 0;
+    background-color: #357edd;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+}
+
+.SearchButton:hover,
+.SearchButton:focus {
+  cursor: pointer;
+  transform: scale(1.05);
+}
