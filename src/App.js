@@ -13,7 +13,7 @@ function App(){
   const onSubmitForm = async (e) =>{
     e.preventDefault();
     try {
-      // This is the main connection to our CSE 412 API as its fetching the localhost:3001.
+      // This is the main connection to our CSE 412 API as its fetching the 
       const response = await fetch(`http://localhost:3001/?c_date=${records}`);
       const parseResponse = await response.json();
 

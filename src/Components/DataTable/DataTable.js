@@ -9,7 +9,7 @@ const DataTable = ({data}) => {
     return (
         <div class = "Table">
             <table>
-                <thead>
+                <thead class="fixed-header">
                     <tr>
                         <th>date</th>
                         <th>state</th>

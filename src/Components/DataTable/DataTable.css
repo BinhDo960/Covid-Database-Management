@@ -1,14 +1,27 @@
 .Table {
   display: flex;
+  margin: auto;
   flex-direction: column;
   gap: 10px;
-  padding: 1rem;
-  height: 840px;
+  padding: 0;
+  height: 600px;
+  width: 1500px;
   overflow: auto;
+  border: 5px solid #008cff;
+  border-style: outset;
 }
 
-table {
-    border-collapse: collapse;
+
+.fixed-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  
+}
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
     width: 100%;
   }
   
@@ -20,11 +33,11 @@ table {
   }
   
   th {
-    background-color: rgb(44, 161, 230);
+    background-color: rgb(0, 107, 168);
   }
   
   td {
-    background-color: rgb(108, 199, 255);
+    background-color: rgb(44, 161, 230);
   }
   
   form {
