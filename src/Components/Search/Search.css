@@ -4,6 +4,10 @@ form {
     auto
 }
 
+p.bold {
+    font-weight: bold;
+}
+
 .SearchCSS {
     text-align: center;
 }
@@ -11,10 +15,12 @@ form {
 .SearchBar {
     border-style: none; 
     border-width: 0;
+    padding: 1rem;
     width: 800px;
 }
 
 .SearchButton {
+    width: 100px;
     border-radius: 9999px;
     border-style: none; 
     border-width: 0;
