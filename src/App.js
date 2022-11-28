@@ -1,4 +1,4 @@
-import React, {Component, Fragment, useState} from 'react';
+import React, {useMemo, Fragment, useState} from 'react';
 import Header from './Components/Header/Header';
 import Search from './Components/Search/Search';
 import DataTable from './Components/DataTable/DataTable';
@@ -8,7 +8,9 @@ import './App.css';
 function App(){
 
   const [records, setRecords] = useState("");
+  const [searchType, setSearchType] = useState('none');
   const [data, setData] = useState([]);
+
 
   const onSubmitForm = async (e) =>{
     e.preventDefault();
@@ -29,12 +31,13 @@ function App(){
       <div>
         <div className="background">
           <Header />
-          <Search records = {records} setRecords = {setRecords} onSubmitForm = {onSubmitForm}/>
+          <Search searchType = {searchType} setsSearchType = {setSearchType} records = {records} setRecords = {setRecords} onSubmitForm = {onSubmitForm}/>
           <DataTable data = {data}/>
         </div>
       </div>
     </Fragment>
   );
+  
 }
 
 export default App;
