@@ -25,7 +25,7 @@ const Search2a = ({records, setRecords, records2, setRecords2, onSubmitForm}) =>
                 </button>
             </form>
             <p> 
-                The search format for goes as follows where '_' represents space: <p class = "bold">DATE || ' ' || STATE AND DEATH '{'<'}' ? </p>
+                The search format goes as follows where '_' represents space: <p class = "bold">DATE || ' ' || STATE AND DEATH '{'<'}' ? </p>
             </p>
         </div>
     );
