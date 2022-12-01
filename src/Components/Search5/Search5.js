@@ -1,34 +1,34 @@
 import React, {useState} from 'react';
-import './Search3.css';
+import './Search5.css';
 
-const Search3 = ({records, setRecords, records3, setRecords3, onSubmitForm}) => {
+const Search5 = ({records, setRecords, records5, setRecords5, onSubmitForm}) => {
     return (
         <div class='SearchCSS'>
             <form onSubmit = {onSubmitForm}>
                 <input 
                     type= "search"
-                    placeholder= "Search Date..."
+                    placeholder= "Date"
                     class = "SearchBar mr1"
                     value={records}
                     onChange={e => setRecords(e.target.value)}
                     />
                 <input 
                     type= "search"
-                    placeholder= "Search Death..."
+                    placeholder= "State"
                     class = "SearchBar mr1"
-                    value={records3}
-                    onChange={e => setRecords3(e.target.value)}
+                    value={records5}
+                    onChange={e => setRecords5(e.target.value)}
                     />
                 <button  
                     class= "SearchButton"> 
-                    Search
+                    Delete
                 </button>
             </form>
             <p> 
-                The search format for goes as follows where '_' represents space: <p class = "bold">DATE || ' ' || STATE AND DEATHCONFIRMED '{'>'}' ? </p>
+                The delete format is as follows where '_' represents space: <p class = "bold">DATE || ' ' || STATE</p>
             </p>
         </div>
     );
 }
 
-export default Search3
+export default Search5

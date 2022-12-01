@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
 import './DataTable.css';
-import DataRecords from "./DataRecords.json";
 
 const DataTable = ({data}) => {
-
-    const [records, setRecords] = useState(DataRecords);
     
     return (
         <div class = "Table">

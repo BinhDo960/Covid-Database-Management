@@ -18,7 +18,7 @@ const Search = ({searchType, setSearchType, records, setRecords, onSubmitForm}) 
                 </button>
             </form>
             <p> 
-                An empty search bar is the default parameter to select all known contents in the database. The search format goes as follows where '_' represents space: <p class = "bold">DATE '_' STATE </p>
+                An empty search bar is the default parameter to select all known contents in the database. The search format goes as follows where '_' represents space: <p class = "bold">DATE || '_' || STATE </p>
             </p>
         </div>
     );
